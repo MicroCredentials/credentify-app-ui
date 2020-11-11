@@ -1,0 +1,8 @@
+.DS_Store
+.nuxt
+node_modules
+dist
+npm-debug.log
+static/sw.js
+
+ignorecase = false

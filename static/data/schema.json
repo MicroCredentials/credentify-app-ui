@@ -1,0 +1,200 @@
+{
+  "refLanguage": {
+    "description": "ISO 639-1 code of the qualification language",
+    "label": "Ref language"
+  },
+  "altLabel": {
+    "description": "Alternative name of the qualification",
+    "label": "Alternative label"
+  },
+  "definition": {
+    "description": "Short description of the qualification",
+    "label": "Definition"
+  },
+  "learningOutcomeDesc": {
+    "description": "Full learning outcome description of the qualification",
+    "label": "Learning outcome description"
+  },
+  "field": {
+    "description": "Field of Education and Training Code (ISCED FoET 2013)",
+    "label": "Field"
+  },
+  "eqfLevel": {
+    "description": "European Qualification Framework level",
+    "label": "EQF level"
+  },
+  "nqfLevel": {
+    "description": "National/Regional Qualification Framework level",
+    "label": "NQF Level"
+  },
+  "creditSystem": {
+    "description": "Name of the Credit system in use (e.g. ECTS)",
+    "label": "Credit system",
+    "group": {
+      "name": "Credit System"
+    }
+  },
+  "creditSysTitle": {
+    "description": "Exact and official title of the Credit system",
+    "label": "Credit system title",
+    "group": {
+      "name": "Credit System"
+    }    
+  },
+  "creditSysDef": {
+    "description": "Short and abstract description of the Credit system",
+    "label": "Credit system description",
+    "group": {
+      "name": "Credit System"
+    }    
+  },
+  "creditSysValue": {
+    "description": "Value described in terms of hours/certificates/accompl.",
+    "label": "Credit system value",
+    "group": {
+      "name": "Credit System"
+    }    
+  },
+  "creditSysIssuer": {
+    "description": "Which organization/consortium/law regulates who can issue this token",
+    "label": "Credit system issuer",
+    "group": {
+      "name": "Credit System"
+    }    
+  },
+  "creditSysRefNum": {
+    "description": "Credit system reference number",
+    "label": "Credit system reference number",
+    "group": {
+      "name": "Credit System"
+    }    
+  },
+  "numCreditPoints": {
+    "description": "Number of credit points assigned to the qualification following this system",
+    "label": "Number of credit points",
+    "group": {
+      "name": "Credit System"
+    }    
+  },
+  "ectsCreditPoints": {
+    "description": "Number of credit points assigned to the qualification following ECTS system",
+    "label": "ECTS credit points",
+    "group": {
+      "name": "Credit System"
+    }    
+  },
+  "volumeOfLearning": {
+    "description": "How many hours of learning are needed (notional learning hours)",
+    "label": "Volume of learning"
+  },
+  "isPartialQual": {
+    "description": "Indicates whether a qualification is a full qualification or a part of another qualification",
+    "label": "Is partial qualification",
+    "type": "boolean"
+  },
+  "waysToAcquire": {
+    "description": "Whether the qualification can be acquired by validation of a formal/non-formal and/or informal learning processes",
+    "label": "Ways to acquire"
+  },
+  "eduCredType": {
+    "description": "Full name of the qualification type or credit system in use",
+    "label": "Education credential type"
+  },
+  "entryReq": {
+    "description": "Entry requirement of the qualification",
+    "label": "Entry requirement"
+  },
+  "learningOutcome": {
+    "description": "Expresses a learning outcome of the qualification as a relation to a skill, competence or knowledge from a known framework or standard classification",
+    "label": "Learning outcome"
+  },
+  "relatedOccupation": {
+    "description": "Relates the qualification to an occupation or occupational field from a known framework or standard classification",
+    "label": "Related occupation"
+  },
+  "recognition": {
+    "description": "Information related to the formal recognition of a qualification",
+    "label": "Recognition"
+  },
+  "awardingActivity": {
+    "description": "Activity related to the awarding of the qualification",
+    "label": "Awarding activity",
+    "group": {
+      "name": "Awarding"
+    }    
+  },
+  "awardingMethod": {
+    "description": "Whether the qualification is certified through undergoing the learning activity or an assessment of acquired competence",
+    "label": "Awarding method",
+    "group": {
+      "name": "Awarding"
+    }
+  },
+  "gradeScheme": {
+    "description": "Description of the grading scheme and what the grade means",
+    "label": "Grade scheme",
+    "group": {
+      "name": "Awarding"
+    }
+  },
+  "modeOfStudy": {
+    "description": "Online, face to face, practice, workplace, informal learning",
+    "label": "Mode of study"
+  },
+  "publicKey": {
+    "description": "Public Key the institution uses to identify itself and authenticate the credentials",
+    "label": "Public key"
+  },
+  "assesmentMethod": {
+    "description": "Description of the form of assessment",
+    "label": "Assesment method"
+  },
+  "accreditation": {
+    "description": "Information related to the accreditation, quality assurance and regulation of a qualification",
+    "label": "Accreditation"
+  },
+  "homePage": {
+    "description": "The homepage (a public web document) of a qualification",
+    "label": "Home page"
+  },
+  "landingPage": {
+    "description": "A web page that can be navigated to in a web browser to gain access to the qualification and/or additional information",
+    "label": "Landing page"
+  },
+  "supplDoc": {
+    "description": "A public web document containing additional documentation about the qualification, such as a diploma or certificate supplement",
+    "label": "Supplement Document"
+  },
+  "historyNote": {
+    "description": "A property to record information about major lifecycle changes of the qualification (e.g. past state/use/meaning of a qualification)",
+    "label": "History note"
+  },
+  "additionalNote": {
+    "description": "A property to record any further information about a qualification",
+    "label": "Additional note"
+  },
+  "status": {
+    "description": "The publication status of a qualification, e.g. released, obsolete, ...",
+    "label": "Status"
+  },
+  "replacesId": {
+    "description": "A related qualification that was replaced, displaced or superseded by this qualification",
+    "label": "Replaces",
+    "type": "select",
+    "options": "achievements"
+  },
+  "replacedById": {
+    "description": "The qualification that replaces, displaces or supersedes this qualification",
+    "label": "Replaced by",
+    "type": "select",
+    "options": "achievements"
+  },
+  "owner": {
+    "description": "The organization owning rights over the qualification, e.g. an awarding body, a national or regional authority, etc.",
+    "label": "Owner"
+  },
+  "creator": {
+    "description": "Organisation primarily responsible for establishing, defining and managing the qualification and its curricula",
+    "label": "Creator"
+  }
+}

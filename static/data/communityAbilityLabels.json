@@ -1,0 +1,99 @@
+[
+  {
+    "kind": 2001,
+    "label": "read institution data"
+  },
+  {
+    "kind": 2002,
+    "label": "update institution data"
+  },
+  {
+    "kind": 2003,
+    "label": "delete institution"
+  },
+  {
+    "kind": 2004,
+    "label": "create new API key"
+  },
+  {
+    "kind": 2005,
+    "label": "delete existing API key"
+  },
+  {
+    "kind": 2010,
+    "label": "add ability to institution collaborator",
+    "group": "Institution abilities"
+  },
+  {
+    "kind": 2011,
+    "label": "remove ability to institution collaborator",
+    "group": "Institution abilities"
+  },
+  {
+    "kind": 2012,
+    "label": "read institution collaborator's abilities",
+    "group": "Institution abilities"
+  },
+  {
+    "kind": 2013,
+    "label": "read API key abilities and data"
+  },
+  {
+    "kind": 2014,
+    "label": "add ability to existing API key"
+  },
+  {
+    "kind": 2015,
+    "label": "remove ability from existing API key"
+  },
+  {
+    "kind": 2016,
+    "label": "create achievements",
+    "group": "Achievement abilities"
+  },
+  {
+    "kind": 2017,
+    "label": "delete achievements",
+    "group": "Achievement abilities"
+  },
+  {
+    "kind": 2018,
+    "label": "update achievements",
+    "group": "Achievement abilities"
+  },
+  {
+    "kind": 2019,
+    "label": "read achievements",
+    "group": "Achievement abilities"
+  },
+  {
+    "kind": 2020,
+    "label": "read credential",
+    "group": "Credential abilities"
+  },
+  {
+    "kind": 2021,
+    "label": "create credential",
+    "group": "Credential abilities"
+  },
+  {
+    "kind": 2022,
+    "label": "delete credential",
+    "group": "Credential abilities"
+  },
+  {
+    "kind": 2023,
+    "label": "manage credential requests",
+    "group": "Credential abilities"
+  },
+  {
+    "kind": 2024,
+    "label": "finalize credential",
+    "group": "Credential abilities"
+  },
+  {
+    "kind": 2025,
+    "label": "read users requests",
+    "group": "Credential abilities"
+  }
+]

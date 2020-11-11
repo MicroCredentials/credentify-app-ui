@@ -1,0 +1,197 @@
+:root {
+  --controller-height: 50px;
+  --space: 15px;
+  --avatar-size: 35px;
+  --sidebar-width: 210px;
+
+  @include breakpoint(medium) {
+    --avatar-size: 40px;
+    --controller-height: 65px;
+    --space: 22px;
+  }
+}
+
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+#__layout {
+  display: flex;
+  flex-grow: 1;
+  width: 100vw;
+}
+
+.layout {
+  display: flex;
+  flex-grow: 1;
+  transition: transform $ease;
+
+  @include breakpoint(medium down) {
+    transform: translateX(calc(var(--sidebar-width) * -1));
+
+    .sweet-modal-overlay {
+      font-size: 16px;
+      transform: translateX(var(--sidebar-width));
+    }
+
+    &.sidebarOpen {
+      transform: translateX(0);
+    }
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .main-canvas {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+
+    @include breakpoint(medium down) {
+      width: 100vw;
+    }
+  }
+
+  .off-canvas {
+    display: flex;
+    flex-flow: row;
+    flex-grow: 1;
+    height: 100%;
+    transition: all $ease;
+  }
+}
+
+.page {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: var(--controller-height) 0;
+
+  @include breakpoint(medium down) {
+    width: 100%;
+  }
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 1200px;
+  padding: var(--space);
+  width: 100%;
+
+  @include breakpoint(medium) {
+    padding: 40px 44px 30px;
+  }
+
+  &.small {
+    max-width: 700px;
+  }
+
+  &.medium {
+    max-width: 670px;
+    padding-top: 10%;
+  }
+
+  &.top {
+    padding-top: 8%;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.loading {
+    justify-content: center;
+  }
+}
+
+.subtitle {
+  color: #9da0a4;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+
+  @include breakpoint(medium) {
+    font-size: 18px;
+    margin-top: -1rem;
+  }
+}
+
+.controller {
+  background-color: #fff;
+  box-shadow: $box-shadow-strong;
+  clip-path:
+    polygon(0 0,
+    100% 0,
+    100% 400px,
+    0 400px);
+  color: $controllers;
+  display: flex;
+  min-height: var(--controller-height);
+  position: fixed;
+  top: 0;
+  transition: min-height $ease;
+  width: calc(100% - var(--sidebar-width));
+  z-index: 10;
+
+  @include breakpoint(medium down) {
+    width: 100vw;
+  }
+
+  .title {
+    font-size: 18px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 50%);
+
+    @include breakpoint(medium) {
+      font-size: 22px;
+      top: 4px;
+    }
+  }
+}
+
+.toolbar {
+  background-color: #fff;
+  border-top: 1px solid $border;
+  bottom: 0;
+  left: var(--sidebar-width);
+  min-height: var(--controller-height);
+  padding: 0 var(--space);
+  position: fixed;
+  width: 100vw;
+
+  @include breakpoint(medium) {
+    width: calc(100% - var(--sidebar-width));
+  }
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: var(--sidebar-width);
+}
+
+.icon--title {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-right: 20px;
+  }
+}

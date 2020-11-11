@@ -1,0 +1,15 @@
+[
+  { "kind": 1001, "label": "authenticate" },
+  { "kind": 1002, "label": "update profile information" },
+  { "kind": 1003, "label": "delete profile" },
+  { "kind": 1004, "label": "reset login password" },
+  { "kind": 1005, "label": "change login email" },
+  { "kind": 1006, "label": "create new institution" },
+  { "kind": 1007, "label": "create credentials" },
+  { "kind": 1008, "label": "delete credentials" },
+  { "kind": 1009, "label": "complete or fail credentials" },
+  { "kind": 1010, "label": "read own credentials" },
+  { "kind": 1011, "label": "read all credentials" },
+  { "kind": 1012, "label": "request credentials" },
+  { "kind": 1013, "label": "accept or reject credential request" }
+]

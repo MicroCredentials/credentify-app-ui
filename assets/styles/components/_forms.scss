@@ -1,0 +1,422 @@
+@import 'vue-select/dist/vue-select.css';
+
+.input,
+[type='text'],
+[type='number'],
+[type='password'],
+[type='email'],
+[type='date'],
+textarea {
+  border: 0;
+  font-family: $primary-font;
+  font-size: 16px;
+  transition: all $transition-quick;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form {
+  color: #5a5f67;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  .links {
+    margin-top: 15px;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: right;
+    }
+  }
+
+  .help {
+    color: $help;
+    margin-top: 15px;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+}
+
+.form--heading {
+  color: #9da0a4;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  margin-top: 28px;
+  text-transform: uppercase;
+
+  &.danger {
+    color: $red;
+  }
+}
+
+.field--item,
+.option--item,
+.options--header {
+  border-bottom: 1px solid $border;
+  display: block;
+  font-size: 17px;
+  min-height: 55px;
+  padding: 18px 20px;
+  position: relative;
+
+  @include breakpoint(medium) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 18px 25px;
+
+    &.taller {
+      padding: 20px 25px;
+    }
+
+    &.align-center {
+      align-items: center;
+    }
+  }
+
+  &.full {
+    flex-basis: 100%;
+  }
+
+  &.in-column {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &:focus-within label {
+    color: $heading;
+  }
+
+  input,
+  textarea,
+  .value {
+    color: $heading;
+    flex-grow: 1;
+    font-size: 17px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  label {
+    display: flex;
+    font-size: 17px;
+    margin-right: var(--space);
+    text-align: left;
+    word-break: keep-all;
+
+    &.equal {
+      flex-basis: 15%;
+    }
+
+    &.equal + .data {
+      flex-basis: calc(85% - var(--space));
+    }
+
+    &.equal-small {
+      flex-basis: 24%;
+    }
+  }
+
+  .description {
+    color: #7d8285;
+    flex-grow: 1;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+
+    @include breakpoint(medium) {
+      padding-bottom: 0;
+    }
+  }
+
+  .message {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 55px;
+    text-align: center;
+  }
+
+  .alert {
+    bottom: 1px;
+    color: $red;
+    flex-basis: 100%;
+    font-size: 13px;
+    padding-left: calc(24% + 25px);
+
+    &.no-padding {
+      padding-left: 0;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+
+  &.grow {
+    flex-grow: 1;
+
+    label {
+      flex-basis: auto;
+    }
+  }
+
+  &.shrink {
+    flex-grow: 0 !important;
+    flex-shrink: 1;
+
+    input {
+      flex-grow: 0;
+    }
+  }
+}
+
+.fields,
+.options {
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 6px;
+  box-shadow: $box-shadow-light;
+
+  &.danger {
+    border: 1px solid #e3adad;
+  }
+
+  .col {
+    padding-right: 15px;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+.fields.in-row {
+  border-bottom: 0;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row wrap;
+
+  .field--item {
+    border-bottom: 1px solid $border;
+    border-right: 1px solid $border;
+    flex-grow: 1;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.option--item {
+  min-height: 55px;
+  padding: 20px;
+  transition: background-color $transition-quick;
+
+  @include breakpoint(small only) {
+    .col:nth-of-type(1),
+    .col:nth-of-type(2) {
+      margin-bottom: 10px;
+    }
+
+    .last {
+      position: absolute;
+      right: var(--space);
+      top: calc(50% - 5px);
+    }
+
+    .participant {
+      display: flex;
+
+      .icon {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $light-blue;
+    text-decoration: none;
+  }
+
+  .description {
+    flex-grow: 1;
+  }
+}
+
+.options--header {
+  border-bottom: 0;
+  color: $help;
+  font-size: 12px;
+  font-weight: bold;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.fields.equal {
+  .field--item {
+    flex-basis: 50%;
+
+    &.full {
+      flex-basis: 100%;
+    }
+
+    label {
+      flex-basis: 23%;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $placeholder;
+}
+
+::-moz-placeholder {
+  color: $placeholder;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder;
+}
+
+:-moz-placeholder {
+  color: $placeholder;
+}
+
+@include breakpoint(medium) {
+  .br-0 {
+    border-right: 0 !important;
+  }
+
+  .bl-0 {
+    border-left: 0 !important;
+  }
+}
+
+.v-select {
+  flex-grow: 1;
+
+  input {
+    color: $placeholder;
+  }
+}
+
+.vs__dropdown-toggle {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.vs__selected {
+  align-items: center;
+  background-color: #f0f0f0;
+  color: inherit;
+  display: flex;
+  line-height: 1.4;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.vs--single .vs__selected {
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+.vs__search,
+.vs__search:focus {
+  border-left: 0;
+  flex-grow: 1;
+  font-size: inherit;
+  margin: 0;
+  max-width: 100%;
+  outline: none;
+  padding: 0;
+}
+
+.vs__dropdown-option {
+  .email {
+    margin-left: 1rem;
+    opacity: 0.6;
+  }
+}
+
+.vs__dropdown-option--highlight {
+  background: $blue-light;
+  color: $white;
+}
+
+input.switch {
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 1px solid #d9dadc;
+  border-radius: 50px;
+  box-shadow: inset -16px 0 0 0 #f2f2f2;
+  cursor: pointer;
+  height: 24px;
+  margin-right: 20px;
+  min-width: 40px;
+  outline: none;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+  width: 40px;
+}
+
+input.switch::after {
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+  content: '';
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  transition: all ease-in-out 0.2s;
+  width: 20px;
+}
+
+input.switch:checked {
+  box-shadow: inset 16px 0 0 0 $secondary;
+}
+
+input.switch:checked::after {
+  box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.1);
+  left: 17px;
+}
+
+// User form field
+
+.user {
+  display: flex;
+}
+
+.user--data {
+  span {
+    display: block;
+  }
+
+  a {
+    color: $primary;
+  }
+}
+
+.user--image img {
+  border-radius: 55px;
+  display: block;
+  overflow: hidden;
+}
+
+.profile {
+  align-items: flex-start;
+}

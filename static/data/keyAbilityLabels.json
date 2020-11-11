@@ -1,0 +1,34 @@
+[
+  {
+    "kind": 3001, 
+    "label": "User can read asset."
+  },
+  {
+    "kind": 3002, 
+    "label": "User can create new asset."
+  },
+  {
+    "kind": 3003, 
+    "label": "User can update existing asset."
+  },
+  {
+    "kind": 3004, 
+    "label": "User can delete existing asset."
+  },
+  {
+    "kind": 3005, 
+    "label": "User can read article."
+  },
+  {
+    "kind": 3006, 
+    "label": "User can create new article."
+  },
+  {
+    "kind": 3007, 
+    "label": "User can update existing article."
+  },
+  {
+    "kind": 3008, 
+    "label": "User can delete existing article"
+  }
+]

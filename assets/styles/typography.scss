@@ -1,0 +1,75 @@
+h1,
+h2,
+h3,
+h4 {
+  color: $heading;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 1rem;
+  margin-top: 0;
+
+  @include breakpoint(medium) {
+    font-size: 34px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 2rem;
+
+  @include breakpoint(medium) {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  color: inherit;
+  font-size: 24px;
+
+  @include breakpoint(medium) {
+    font-size: 28px;
+  }
+}
+
+pre {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+p a {
+  text-decoration: none;
+
+  &:hover {
+    color: $primary;
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $border;
+  margin: 30px 0;
+}
+
+blockquote {
+  background-color: rgba(112, 0, 255, 0.05);
+  margin: 30px 0;
+  padding: 10px 37px;
+}
+
+main {
+  li > p {
+    margin: 0;
+  }
+}
+
+.meta {
+  color: $gray;
+  font-size: 16px;
+}

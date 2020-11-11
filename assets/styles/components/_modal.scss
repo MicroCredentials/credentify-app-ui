@@ -1,0 +1,86 @@
+[data-modal='dialog'] {
+  z-index: 1000 !important;
+}
+
+.v--modal {
+  padding: 2rem !important;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  .controllers {
+    bottom: 1rem;
+    position: absolute;
+    right: 1rem;
+  }
+
+  &.vue-dialog {
+    padding: 0 !important;
+
+    .button {
+      flex: 0 1 auto !important;
+    }
+
+    .vue-dialog-button {
+      color: var(--primary-color);
+      font-size: 15px !important;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: background-color var(--quick);
+
+      &:hover {
+        background: var(--primary-lighter);
+      }
+    }
+  }
+}
+
+.vue-dialog {
+  padding: 0 !important;
+
+  @include breakpoint(medium) {
+    margin-left: 105px;
+  }
+
+  .dialog-c-title {
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+  }
+
+  .dialog-c-text {
+    color: var(--grey);
+  }
+
+  .dialog-content {
+    color: var(--black);
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    padding: 1.5rem !important;
+  }
+
+  .vue-dialog-buttons {
+    border-top: 0 !important;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .vue-dialog-button {
+    border-radius: var(--global-radius);
+    color: var(--primary-color);
+    flex: 0 0 auto !important;
+    font-size: 14px !important;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    padding: 11px 1rem;
+    text-transform: uppercase;
+    transition: background-color var(--quick);
+
+    &:hover {
+      background: var(--primary-lighter);
+    }
+  }
+}

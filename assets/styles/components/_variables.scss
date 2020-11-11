@@ -1,0 +1,54 @@
+:root {
+  // Colors
+  --primary-color: #3651ff;
+}
+
+// Colors
+
+$white: #fff;
+$black: #020202;
+$base: #5a5f67;
+$heading: #353740;
+
+$gray: #7d8285;
+$gray-light: lighten($gray, 30%);
+$gray-dark: #404040;
+$help: #989ba0;
+$dark-hover: #434552;
+
+$blue: #3651ff;
+$blue-light: #368dff;
+$cyan: #5ac9ec;
+$purple: #5853bb;
+$purple-light: #924cad;
+$red: #ca6a6a;
+$yellow: #fbcc0d;
+$orange: #f48457;
+$green: #2ad35a;
+$cyan: #00b3c0;
+$green-dark: #02464d;
+
+$primary: $blue;
+$secondary: $green;
+$controllers: #5a5f67;
+
+$border: lighten(#e4e4e7, 2%);
+$main-bg: #f4f4f4;
+
+$highlight: #eff1f4;
+$light-blue: #f0f2ff;
+$placeholder: #b3b5b9;
+
+$green-gradient: linear-gradient(to bottom right, $green, $cyan);
+$purple-gradient: linear-gradient(to bottom right, $purple, $purple-light);
+
+$hover: lighten($primary, 10%);
+
+$primary-font: 'Source Sans Pro', sans-serif;
+$transition-quick: ease-in-out 0.15s;
+
+$animation-duration: 0.4s;
+
+$ease: cubic-bezier(0.32, 0.23, 0.49, 0.95) 300ms;
+$box-shadow-strong: 0 2px 15px 0 $gray-light;
+$box-shadow-light: 0 5px 12px 0 rgba(125, 130, 133, 0.1);

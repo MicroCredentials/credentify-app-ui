@@ -1,0 +1,168 @@
+.options--table {
+  .first {
+    flex-basis: 22%;
+  }
+
+  .options--header {
+    justify-content: flex-start;
+  }
+
+  .option--item {
+    flex-wrap: wrap;
+  }
+
+  .option--details {
+    background-color: $heading;
+    color: $white;
+    flex-basis: 100%;
+    padding: 20px;
+  }
+}
+
+.pager {
+  display: flex;
+  list-style: none;
+  margin: 1rem 0 3rem;
+  padding: 0;
+
+  .page-next,
+  .page-prev,
+  .page-item {
+    background: $white;
+    border: 2px solid $border;
+    border-radius: 6px;
+    color: $help;
+    margin-right: 9px;
+    transition: background-color $ease;
+
+    a {
+      display: block;
+      outline: none;
+      padding: 5px 12px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        background-color: $light-blue;
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      background: $help;
+      font-weight: bold;
+
+      a {
+        color: $white;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+
+    &.disabled {
+      cursor: default;
+      opacity: 0.5;
+
+      a {
+        cursor: default;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.table--participants {
+  .col {
+    &:nth-child(1) {
+      flex-basis: 33%;
+    }
+
+    &:nth-child(2) {
+      flex-basis: 33%;
+    }
+
+    &:nth-child(3) {
+      flex-basis: auto;
+    }
+
+    &.last {
+      margin-left: auto;
+    }
+  }
+}
+
+.table--credentials {
+  .col {
+    &:nth-child(1) {
+      flex-basis: 35%;
+    }
+
+    &:nth-child(2) {
+      flex-basis: 35%;
+    }
+
+    &:nth-child(3) {
+      flex-basis: 15%;
+    }
+
+    &:nth-child(4) {
+      flex-basis: auto;
+    }
+
+    &.last {
+      margin-left: auto;
+    }
+  }
+}
+
+.table--requests {
+  .col {
+    &:nth-child(1) {
+      flex-basis: 25%;
+    }
+
+    &:nth-child(2) {
+      flex-basis: 40%;
+    }
+
+    &:nth-child(3) {
+      flex-basis: 20%;
+    }
+
+    &:nth-child(4) {
+      flex-basis: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.table--institutions {
+  .col {
+    &:nth-child(1) {
+      align-self: flex-start;
+      flex-basis: 60%;
+    }
+
+    // &:nth-child(2) { flex-basis: 45%}
+    &:nth-child(2) {
+      flex-basis: auto;
+    }
+
+    &.last {
+      margin-left: auto;
+    }
+  }
+}
