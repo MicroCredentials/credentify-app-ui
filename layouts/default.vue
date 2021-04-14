@@ -18,7 +18,6 @@ export default {
   components: {
     Controller
   },
-  computed: {
-  }
+  computed: mapState()
 }
 </script>
