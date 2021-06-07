@@ -53,6 +53,7 @@ export default {
   border-bottom-style: dotted;
   border-color: $gray;
   display: flex;
+  height: 70px;
   width: 100%;
 
   /* For NuxtLinks inside sidebaritems */
