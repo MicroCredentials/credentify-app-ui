@@ -32,6 +32,8 @@ export default {
 <style lang="scss">
 .sidebartitle {
   align-items: center;
+  border-bottom-style: solid;
+  border-color: $gray;
   color: #fff;
   display: flex;
   justify-content: flex-start;
@@ -44,6 +46,8 @@ export default {
 
 .sidebaritem {
   align-items: center;
+  border-bottom-style: dotted;
+  border-color: $gray;
   display: flex;
   padding: 1rem;
   width: 100%;
