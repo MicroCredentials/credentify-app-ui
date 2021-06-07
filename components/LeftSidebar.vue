@@ -4,14 +4,15 @@
       <img src="~/assets/icons/credentify.svg" alt="Credentify logo" />
       Credentify
     </div>
-    <div v-if="this.$auth.loggedIn" class="links">
+    <div v-if="this.$auth.loggedIn" class="sidebaritems">
       <div
         v-for="menuitem in menu_items"
         :key="menuitem.label"
         class="sidebaritem"
       >
         <NuxtLink :to="menuitem.url">
-          <img :src="menuitem.icon" />{{ menuitem.label }}
+          <img :src="menuitem.icon" />
+          <span>{{ menuitem.label }}</span>
         </NuxtLink>
       </div>
     </div>
@@ -44,17 +45,19 @@ export default {
 .sidebaritem {
   align-items: center;
   display: flex;
-  padding-bottom: 1rem;
-  padding-left: 20px;
-  padding-right: 30px;
-  padding-top: 1rem;
+  padding: 1rem;
+  width: 100%;
 
-  /* For NuxtLinks */
+  /* For NuxtLinks inside sidebaritems */
   a {
+    align-items: center;
     color: #fff;
+    display: flex;
+    width: 100%;
 
     img {
-      margin-right: 10px;
+      margin-right: 15px;
+      width: 25px;
     }
   }
 }
