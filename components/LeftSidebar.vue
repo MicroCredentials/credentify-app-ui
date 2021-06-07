@@ -2,7 +2,7 @@
   <div class="sidebar">
     <div class="sidebartitle">
       <img src="~/assets/icons/credentify.svg" alt="Credentify logo" />
-      Credentify
+      <span>Credentify</span>
     </div>
     <div v-if="this.$auth.loggedIn" class="sidebaritems">
       <div
@@ -42,6 +42,10 @@ export default {
   img {
     padding-right: 10px;
   }
+
+  span {
+    font-weight: bold;
+  }
 }
 
 .sidebaritem {
@@ -49,7 +53,6 @@ export default {
   border-bottom-style: dotted;
   border-color: $gray;
   display: flex;
-  padding: 1rem;
   width: 100%;
 
   /* For NuxtLinks inside sidebaritems */
@@ -57,6 +60,7 @@ export default {
     align-items: center;
     color: #fff;
     display: flex;
+    padding: 1rem;
     width: 100%;
 
     img {
@@ -64,5 +68,10 @@ export default {
       width: 25px;
     }
   }
+}
+
+.sidebaritem:hover {
+  border-left-color: $blue-light;
+  border-left-style: solid;
 }
 </style>
