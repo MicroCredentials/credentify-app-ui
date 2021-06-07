@@ -16,6 +16,11 @@
         </NuxtLink>
       </div>
     </div>
+    <div class="zeroxcert-advertisement">
+      <a href="https://github.com/0xcert/framework">
+        Powered by <br />0xcert framework
+      </a>
+    </div>
   </div>
 </template>
 
@@ -74,5 +79,18 @@ export default {
 .sidebaritem:hover {
   border-left-color: $blue-light;
   border-left-style: solid;
+}
+
+.zeroxcert-advertisement {
+  align-items: center;
+  bottom: 0;
+  font-weight: bold;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+
+  > a {
+    color: $gray-light;
+  }
 }
 </style>
