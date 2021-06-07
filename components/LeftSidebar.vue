@@ -34,7 +34,7 @@ export default {
   align-items: center;
   border-bottom-style: solid;
   border-color: $gray;
-  color: #fff;
+  color: $white;
   display: flex;
   justify-content: flex-start;
   padding: 1rem;
@@ -59,7 +59,7 @@ export default {
   /* For NuxtLinks inside sidebaritems */
   a {
     align-items: center;
-    color: #fff;
+    color: $white;
     display: flex;
     padding: 1rem;
     width: 100%;
