@@ -6,7 +6,7 @@
     </div>
     <div v-if="this.$auth.loggedIn" class="sidebaritems">
       <div
-        v-for="menuitem in menu_items"
+        v-for="menuitem in filteredMenuItems"
         :key="menuitem.label"
         class="sidebaritem"
       >
@@ -25,10 +25,39 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   computed: {
-    menu_items() {
-      return this.$store.state.nav.menuItems
+    ...mapState({
+      menuItems: (state) => state.nav.menuItems
+    }),
+    ...mapState({
+      profileAbilities: (state) => state.profile.profileAbilities
+    }),
+    ...mapState({
+      requiredUserViewRights: (state) =>
+        state.nav.menuItems[2].requiredAbilities
+    }),
+    filteredMenuItems() {
+      const filteredItems = []
+      for (const item of this.menuItems) {
+        if (item.label === 'Users') {
+          let allowedToViewUsers = false
+          for (const ability of this.$auth.user.communityAbilities) {
+            if (ability.kind === 2002) {
+              allowedToViewUsers = true
+              break
+            }
+          }
+          if (allowedToViewUsers) {
+            filteredItems.push(item)
+          }
+        } else {
+          filteredItems.push(item)
+        }
+      }
+      return filteredItems
     }
   }
 }
@@ -55,17 +84,21 @@ export default {
 
 .sidebaritem {
   align-items: center;
-  border-bottom-style: dotted;
-  border-color: $gray;
   display: flex;
-  height: 70px;
   width: 100%;
 
+  > div {
+    display: none;
+  }
+
   /* For NuxtLinks inside sidebaritems */
-  a {
+  > a {
     align-items: center;
+    border-bottom-style: dotted;
+    border-color: $gray;
     color: $white;
     display: flex;
+    height: 70px;
     padding: 1rem;
     width: 100%;
 
