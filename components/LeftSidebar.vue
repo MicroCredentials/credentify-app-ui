@@ -87,10 +87,6 @@ export default {
   display: flex;
   width: 100%;
 
-  > div {
-    display: none;
-  }
-
   /* For NuxtLinks inside sidebaritems */
   > a {
     align-items: center;
