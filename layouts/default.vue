@@ -1,6 +1,7 @@
 <template>
-  <div :class="['layout', { loggedin: this.$auth.loggedIn }]">
+  <div :class="['layout', { sidebarOpen, loggedin: this.$auth.loggedIn }]">
     <v-dialog />
+    <LeftSidebar />
     <div class="main-canvas">
       <controller />
       <div class="page">
@@ -13,11 +14,15 @@
 <script>
 import { mapState } from 'vuex'
 import Controller from '~/components/Controller'
+import LeftSidebar from '~/components/LeftSidebar'
 
 export default {
   components: {
-    Controller
+    Controller,
+    LeftSidebar
   },
-  computed: mapState()
+  computed: mapState({
+    sidebarOpen: (state) => state.nav.sidebarOpen
+  })
 }
 </script>
