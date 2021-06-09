@@ -65,6 +65,12 @@ export default {
   background-color: $gray-dark;
   flex-shrink: 0;
   width: var(--sidebar-width);
+  z-index: calc(var(--controller-layer) + 2);
+
+  /*  &.sidebarOpen {
+    transform: translateX(var(--sidebar-width));
+    transition: 0.3s;
+  } */
 
   .sidebartitle {
     align-items: center;

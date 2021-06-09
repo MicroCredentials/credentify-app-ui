@@ -3,6 +3,7 @@
   --space: 15px;
   --avatar-size: 35px;
   --sidebar-width: 210px;
+  --controller-layer: 10;
 
   @include breakpoint(medium) {
     --avatar-size: 40px;
@@ -142,7 +143,7 @@
   top: 0;
   transition: min-height $ease;
   width: calc(100% - var(--sidebar-width));
-  z-index: 10;
+  z-index: var(--controller-layer);
 
   @include breakpoint(medium down) {
     width: 100vw;

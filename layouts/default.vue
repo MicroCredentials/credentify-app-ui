@@ -1,5 +1,5 @@
 <template>
-  <div :class="['layout', { loggedin: this.$auth.loggedIn }]">
+  <div :class="['layout', { sidebarOpen, loggedin: this.$auth.loggedIn }]">
     <v-dialog />
     <LeftSidebar />
     <div class="main-canvas">
@@ -21,6 +21,8 @@ export default {
     Controller,
     LeftSidebar
   },
-  computed: mapState()
+  computed: mapState({
+    sidebarOpen: (state) => state.nav.sidebarOpen
+  })
 }
 </script>
