@@ -94,7 +94,8 @@ export default {
   /* For NuxtLinks inside sidebaritems */
   > a {
     align-items: center;
-    border-bottom-style: dotted;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
     border-color: $gray;
     color: $white;
     display: flex;
