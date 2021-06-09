@@ -30,14 +30,11 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      menuItems: (state) => state.nav.menuItems
-    }),
-    ...mapState({
-      profileAbilities: (state) => state.profile.profileAbilities
-    }),
-    ...mapState({
+      sidebarOpen: (state) => state.nav.sidebarOpen,
+      menuItems: (state) => state.nav.menuItems,
       requiredUserViewRights: (state) =>
-        state.nav.menuItems[2].requiredAbilities
+        state.nav.menuItems[2].requiredAbilities,
+      profileAbilities: (state) => state.profile.profileAbilities
     }),
     filteredMenuItems() {
       const filteredItems = []
