@@ -64,63 +64,73 @@ export default {
 </script>
 
 <style lang="scss">
-.sidebartitle {
-  align-items: center;
-  border-bottom-style: solid;
-  border-color: $gray;
-  color: $white;
-  display: flex;
-  justify-content: flex-start;
-  padding: 1rem;
+.sidebar {
+  background-color: $gray-dark;
+  flex-shrink: 0;
+  width: var(--sidebar-width);
 
-  img {
-    padding-right: 10px;
-  }
-
-  span {
-    font-weight: bold;
-  }
-}
-
-.sidebaritem {
-  align-items: center;
-  display: flex;
-  width: 100%;
-
-  /* For NuxtLinks inside sidebaritems */
-  > a {
+  .sidebartitle {
     align-items: center;
     border-bottom-style: solid;
-    border-bottom-width: thin;
     border-color: $gray;
     color: $white;
     display: flex;
-    height: 70px;
+    justify-content: flex-start;
     padding: 1rem;
-    width: 100%;
 
     img {
-      margin-right: 15px;
-      width: 25px;
+      padding-right: 10px;
+    }
+
+    span {
+      font-weight: bold;
     }
   }
-}
 
-.sidebaritem:hover {
-  border-left-color: $blue-light;
-  border-left-style: solid;
-}
+  .sidebaritem {
+    align-items: center;
+    display: flex;
+    width: 100%;
 
-.zeroxcert-advertisement {
-  align-items: center;
-  bottom: 0;
-  font-weight: bold;
-  left: 0;
-  padding: 1rem;
-  position: absolute;
+    /* For NuxtLinks inside sidebaritems */
+    > a {
+      align-items: center;
+      border-bottom-style: solid;
+      border-bottom-width: thin;
+      border-color: $gray;
+      color: $white;
+      display: flex;
+      height: 70px;
+      padding: 1rem;
+      width: 100%;
 
-  > a {
-    color: $gray-light;
+      img {
+        margin-right: 15px;
+        width: 25px;
+      }
+    }
+  }
+
+  .sidebaritem:hover {
+    border-left-color: $blue-light;
+    border-left-style: solid;
+  }
+
+  .zeroxcert-advertisement {
+    align-items: center;
+    background-color: $gray-dark;
+    bottom: 0;
+    font-weight: bold;
+    left: 0;
+    opacity: 1;
+    padding: 1rem;
+    position: absolute;
+    width: var(--sidebar-width);
+
+    > a {
+      color: $gray-light;
+      width: 100%;
+    }
   }
 }
 </style>
